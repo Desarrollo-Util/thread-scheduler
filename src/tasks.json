@@ -1,0 +1,26 @@
+{
+  "tasks": [
+    {
+      "pubDate": "2022-04-07T16:36:50.000Z",
+      "data": [
+        {
+          "text": "Tuit realizado mediante el bot",
+          "media": "example1.jpg"
+        }
+      ]
+    },
+    {
+      "pubDate": "2022-04-04T16:38:30.000Z",      
+      "data": [
+        {
+          "text": "Hilo realizado mediante el bot 1",
+          "media": "example2.jpg"
+        },
+        {
+          "text": "Hilo realizado mediante el bot 2",
+          "media": "example3.jpg"
+        }
+      ]
+    }
+  ]
+}
