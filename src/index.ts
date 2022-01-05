@@ -14,16 +14,20 @@ const bootstrap = async () => {
 	scheduleTasks(twitterClient, tasks);
 
 	watchFile(join(__dirname, '../src/tasks.json'), async () => {
-		console.log(Object.keys(schedule.scheduledJobs).length);
+		console.log(
+			`Detected changes in tasks file, previous tasks enqueued ${
+				Object.keys(schedule.scheduledJobs).length
+			}`
+		);
 
 		await (schedule as any).gracefulShutdown();
-
-		console.log(Object.keys(schedule.scheduledJobs).length);
 
 		const tasks = await readNewTasks();
 		scheduleTasks(twitterClient, tasks);
 
-		console.log(Object.keys(schedule.scheduledJobs).length);
+		console.log(
+			`New tasks enqueued ${Object.keys(schedule.scheduledJobs).length}`
+		);
 	});
 };
 
